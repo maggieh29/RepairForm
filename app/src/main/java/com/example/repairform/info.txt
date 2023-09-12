@@ -1,0 +1,9 @@
+Questions
+Which type of widget did we use for task #4?
+TextView widget
+
+What is the main difference between a TextView widget and an EditText widget?
+TextView cannot be edited by user, EditText can be edited by user
+
+
+

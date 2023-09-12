@@ -5,6 +5,7 @@
     android:id="@+id/nameInput"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BCC4F3"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,11 +16,11 @@
         android:layout_marginTop="16dp"
         android:text="$0.00"
         android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@+id/total"
+        app:layout_constraintStart_toEndOf="@+id/total_tv"
         app:layout_constraintTop_toBottomOf="@+id/taxNum" />
 
     <TextView
-        android:id="@+id/topTitle"
+        android:id="@+id/topTitle_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -37,55 +38,62 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="444dp"
         android:text="Button"
+        android:textColorHighlight="#FFCFCF"
+        android:textColorLink="#CD6464"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/technicianInput" />
 
     <TextView
-        android:id="@+id/technician"
+        android:id="@+id/technician_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="Technician"
-        app:layout_constraintStart_toStartOf="@+id/orderType"
-        app:layout_constraintTop_toBottomOf="@+id/orderType" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/orderType_tv"
+        app:layout_constraintTop_toBottomOf="@+id/orderType_tv" />
 
     <TextView
-        android:id="@+id/inspection"
+        android:id="@+id/inspection_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="Inspection"
-        app:layout_constraintStart_toStartOf="@+id/technician"
-        app:layout_constraintTop_toBottomOf="@+id/technician" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/technician_tv"
+        app:layout_constraintTop_toBottomOf="@+id/technician_tv" />
 
     <TextView
-        android:id="@+id/paint"
+        android:id="@+id/paint_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="Paint"
-        app:layout_constraintStart_toStartOf="@+id/inspection"
-        app:layout_constraintTop_toBottomOf="@+id/inspection" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inspection_tv"
+        app:layout_constraintTop_toBottomOf="@+id/inspection_tv" />
 
     <TextView
-        android:id="@+id/parts"
+        android:id="@+id/parts_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="Parts"
-        app:layout_constraintStart_toStartOf="@+id/paint"
-        app:layout_constraintTop_toBottomOf="@+id/paint" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/paint_tv"
+        app:layout_constraintTop_toBottomOf="@+id/paint_tv" />
 
     <TextView
-        android:id="@+id/labor"
+        android:id="@+id/labor_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="Labor"
-        app:layout_constraintStart_toStartOf="@+id/parts"
-        app:layout_constraintTop_toBottomOf="@+id/parts" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/parts_tv"
+        app:layout_constraintTop_toBottomOf="@+id/parts_tv" />
 
     <TextView
         android:id="@+id/textView7"
@@ -95,10 +103,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/topTitle_tv" />
 
     <TextView
-        android:id="@+id/subtotal"
+        android:id="@+id/subtotal_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="239dp"
@@ -108,24 +116,24 @@
         app:layout_constraintTop_toBottomOf="@+id/technicianInput" />
 
     <TextView
-        android:id="@+id/tax"
+        android:id="@+id/tax_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="239dp"
         android:layout_marginTop="16dp"
         android:text="Tax"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtotal" />
+        app:layout_constraintTop_toBottomOf="@+id/subtotal_tv" />
 
     <TextView
-        android:id="@+id/total"
+        android:id="@+id/total_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="239dp"
         android:layout_marginTop="16dp"
         android:text="Total"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tax" />
+        app:layout_constraintTop_toBottomOf="@+id/tax_tv" />
 
     <TextView
         android:id="@+id/taxNum"
@@ -135,7 +143,7 @@
         android:layout_marginTop="16dp"
         android:text="$0.00"
         android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@+id/tax"
+        app:layout_constraintStart_toEndOf="@+id/tax_tv"
         app:layout_constraintTop_toBottomOf="@+id/subtotalNum" />
 
     <TextView
@@ -147,7 +155,7 @@
         android:text="$0.00"
         android:textSize="14sp"
         android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@+id/subtotal"
+        app:layout_constraintStart_toEndOf="@+id/subtotal_tv"
         app:layout_constraintTop_toBottomOf="@+id/technicianInput" />
 
     <EditText
@@ -155,6 +163,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#E4D5FF"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
@@ -166,6 +175,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#E4D5FF"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
@@ -177,6 +187,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:backgroundTint="#E4D5FF"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
@@ -189,19 +200,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
         android:layout_marginTop="21dp"
+        android:backgroundTint="#E4D5FF"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/orderType"
+        app:layout_constraintStart_toEndOf="@+id/orderType_tv"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/orderType"
+        android:id="@+id/orderType_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
         android:layout_marginTop="140dp"
         android:text="Order Type"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -210,6 +223,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:backgroundTint="#E4D5FF"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
@@ -221,6 +235,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#E4D5FF"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
