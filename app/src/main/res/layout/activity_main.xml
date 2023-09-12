@@ -43,88 +43,49 @@
         app:layout_constraintTop_toBottomOf="@+id/technicianInput" />
 
     <TextView
-        android:id="@+id/orderType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="135dp"
-        android:text="Order Type"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/technician"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
         android:layout_marginTop="42dp"
         android:text="Technician"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/orderType"
         app:layout_constraintTop_toBottomOf="@+id/orderType" />
 
     <TextView
         android:id="@+id/inspection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
         android:layout_marginTop="42dp"
         android:text="Inspection"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/technician"
         app:layout_constraintTop_toBottomOf="@+id/technician" />
 
     <TextView
         android:id="@+id/paint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
         android:layout_marginTop="42dp"
         android:text="Paint"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inspection"
         app:layout_constraintTop_toBottomOf="@+id/inspection" />
 
     <TextView
         android:id="@+id/parts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
         android:layout_marginTop="42dp"
         android:text="Parts"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/paint"
         app:layout_constraintTop_toBottomOf="@+id/paint" />
 
     <TextView
         android:id="@+id/labor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
         android:layout_marginTop="42dp"
         android:text="Labor"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/parts"
         app:layout_constraintTop_toBottomOf="@+id/parts" />
-
-    <EditText
-        android:id="@+id/orderInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="33dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/orderType"
-        app:layout_constraintTop_toBottomOf="@+id/topTitle" />
-
-    <EditText
-        android:id="@+id/technicianInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="13dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        app:layout_constraintStart_toEndOf="@+id/technician"
-        app:layout_constraintTop_toBottomOf="@+id/orderInput" />
 
     <TextView
         android:id="@+id/textView7"
@@ -188,5 +149,82 @@
         android:textStyle="italic"
         app:layout_constraintStart_toEndOf="@+id/subtotal"
         app:layout_constraintTop_toBottomOf="@+id/technicianInput" />
+
+    <EditText
+        android:id="@+id/partsInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/paintInput"
+        app:layout_constraintTop_toBottomOf="@+id/paintInput" />
+
+    <EditText
+        android:id="@+id/inspectionInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/technicianInput"
+        app:layout_constraintTop_toBottomOf="@+id/technicianInput" />
+
+    <EditText
+        android:id="@+id/technicianInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/orderInput"
+        app:layout_constraintTop_toBottomOf="@+id/orderInput" />
+
+    <EditText
+        android:id="@+id/orderInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@+id/orderType"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/orderType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="140dp"
+        android:text="Order Type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/paintInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/inspectionInput"
+        app:layout_constraintTop_toBottomOf="@+id/inspectionInput" />
+
+    <EditText
+        android:id="@+id/laborInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@+id/partsInput"
+        app:layout_constraintTop_toBottomOf="@+id/partsInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
