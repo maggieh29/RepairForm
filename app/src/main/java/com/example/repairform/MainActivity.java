@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //assigning the widget created in the xml to a variable in java code
         buttSubmit = findViewById(R.id.buttSubmit);
         inputName = findViewById(R.id.inputName);
