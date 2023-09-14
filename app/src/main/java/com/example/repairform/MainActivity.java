@@ -17,9 +17,16 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             getInputs();
 
-            double subtotal = 20;
-            subtotalNum.setText("$ " + String.valueOf(subtotal));
+            double subtotal = order + technician + inspection + paint + parts + labor;
+            subtotalNum.setText("$" + String.format("%.2f",subtotal));
 
+
+            double tax, total;
+            tax = subtotal * 0.07;
+            total = subtotal + tax;
+
+            taxNum.setText("$" + String.format("%.2f",tax));
+            totalNum.setText("$" + String.format("%.2f",total));
         }
     };
 
@@ -37,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
     EditText paintInput;
     EditText partsInput;
     EditText laborInput;
-    String order;
-    String technician;
-    String inspection;
-    String paint;
-    String parts;
-    String labor;
+    double order;
+    double technician;
+    double inspection;
+    double paint;
+    double parts;
+    double labor;
 
     @Override
     //the first method to be called by default, like the main in java
@@ -69,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
 
         /**now you can manipulate the actions of the variables
         buttSubmit.setText("Hello"); **/
+        orderInput.setText("");
+        techInput.setText("");
+        inspectionInput.setText("");
+        paintInput.setText("");
+        partsInput.setText("");
+        laborInput.setText("");
 
         //Assign button to listener
         buttSubmit.setOnClickListener(submitListener);
@@ -78,12 +91,12 @@ public class MainActivity extends AppCompatActivity {
     }
     //takes all text fields and assigns them to their string variables
     public void getInputs(){
-        order = orderInput.getText().toString();
-        technician = techInput.getText().toString();
-        inspection = inspectionInput.getText().toString();
-        paint = paintInput.getText().toString();
-        parts = partsInput.getText().toString();
-        labor = laborInput.getText().toString();
+        order = Float.valueOf(orderInput.getText().toString());
+        technician = Float.valueOf(techInput.getText().toString());
+        inspection = Float.valueOf(inspectionInput.getText().toString());
+        paint = Float.valueOf(paintInput.getText().toString());
+        parts = Float.valueOf(partsInput.getText().toString());
+        labor = Float.valueOf(laborInput.getText().toString());
     }
 
 }
