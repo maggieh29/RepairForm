@@ -36,12 +36,12 @@
         android:id="@+id/buttSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="444dp"
-        android:text="Button"
+        android:layout_marginTop="336dp"
+        android:text="Submit"
         android:textColorHighlight="#FFCFCF"
         android:textColorLink="#CD6464"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.212"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/technicianInput" />
 
